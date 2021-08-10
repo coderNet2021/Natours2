@@ -37,3 +37,6 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`App running on port ${port}...`);
 });
+
+//for installing the ndb
+//PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1 sudo npm install -g ndb --unsafe-perm=true --allow-root ftw

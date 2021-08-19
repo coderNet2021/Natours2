@@ -1,7 +1,12 @@
 const express = require('express');
 const userController = require('./../controllers/userController');
+const authController = require('./../controllers/authController');
 
 const router = express.Router();
+
+//this endpoint does not fit the rest architecture. it is a special route
+router.post('/signup',authController.signup);
+
 
 router
   .route('/')

@@ -99,6 +99,12 @@ module.exports = (err, req, res, next) => {
       error = handleValidationErrorDB(error);
     }
 
+    if (err.name === 'JsonWebTokenError') {
+      // console.log('we are here @@@@@#####$$$$$');
+      // console.log(error);
+      error = handleJWTError(error);
+    }
+
     sendErrorProd(error, res);
   }
 };

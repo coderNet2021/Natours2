@@ -6,6 +6,7 @@ const router = express.Router();
 
 //this endpoint does not fit the rest architecture. it is a special route
 router.post('/signup',authController.signup);
+router.post('/login',authController.login);
 
 
 router

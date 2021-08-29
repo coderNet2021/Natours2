@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 
 process.on('uncaughtException', err => {
-  console.log(`uncaught Exception!! shutting Down`);
-  console.log(err.name, err.message);
+  ///console.log(`uncaught Exception!! shutting Down`);
+  //console.log(err.name, err.message);
   process.exit(1);
 });
 
@@ -22,7 +22,7 @@ mongoose
     useFindAndModify: false
   })
   .then(con => {
-    console.log(con.connections);
+    //console.log(con.connections);
     console.log('DB connected!');
   });
 
